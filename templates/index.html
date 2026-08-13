@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTU S-VEIMS | Exam Seating & Invigilation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="no-print">
+        <h1>Smart VTU Exam Hall Management System (S-VEIMS)</h1>
+        <p>Zero-Conflict Seating & Neutral Invigilator Allocation System</p>
+    </header>
+
+    <main class="container">
+        <!-- Input Section -->
+        <section class="form-section no-print">
+            <h2>1. Enter Student Count per Branch</h2>
+            <div class="grid-inputs">
+                <label>CSE: <input type="number" id="cse" value="8"></label>
+                <label>ISE: <input type="number" id="ise" value="6"></label>
+                <label>ECE: <input type="number" id="ece" value="6"></label>
+                <label>EEE: <input type="number" id="eee" value="4"></label>
+                <label>MECH: <input type="number" id="mech" value="3"></label>
+                <label>CIVIL: <input type="number" id="civil" value="3"></label>
+            </div>
+            
+            <button onclick="generateEverything()" class="btn">🚀 Generate Seating & Assign Invigilator</button>
+        </section>
+
+        <!-- Invigilator Section -->
+        <section class="invigilator-card" id="invigilator-box">
+            <h3>📋 Assigned Invigilator Details</h3>
+            <div id="invigilator-info">Generating...</div>
+        </section>
+
+        <!-- Seating Grid Section -->
+        <section class="matrix-section">
+            <div class="header-flex">
+                <h2>2. Seating Matrix (5 Rows × 6 Columns)</h2>
+                <button onclick="window.print()" class="btn-print no-print">🖨️ Print VTU Door Notice</button>
+            </div>
+            <div id="hall-grid" class="hall-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

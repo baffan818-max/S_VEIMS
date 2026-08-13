@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+label {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.invigilator-card {
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.badge-success {
+    background: #16a34a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-print {
+    background: #475569;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hall-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.seat {
+    padding: 15px 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    color: white;
+    font-size: 11px;
+}
+
+/* Branch Color Codes */
+.b-CS { background-color: #dc2626; }
+.b-IS { background-color: #0d9488; }
+.b-EC { background-color: #d97706; }
+.b-EE { background-color: #7c3aed; }
+.b-ME { background-color: #2563eb; }
+.b-CI { background-color: #ea580c; }
+.b-EMPTY { background-color: #e2e8f0; color: #94a3b8; }
+
+/* Printing Rules */
+@media print {
+    .no-print { display: none !important; }
+    .container { box-shadow: none; margin: 0; width: 100%; }
+}
